@@ -1,0 +1,24 @@
+//Creating a window is down with sf::Window(x,x,x)
+
+//inside of while (window.isOpen()) you have an sf::Event event, this event tells you what is currently happening
+
+//you are going to poll for the event with while (window.pollEvent(event))
+
+//if the event says close, close the window. 
+
+
+
+sf::Window window(sf::VideoMode(800, 600), "My window", sf::Style::Default);
+	
+	while (window.isOpen()) {
+		sf::Event event;
+
+		while (window.pollEvent(event)) {
+			if (event.type == sf::Event::MouseButtonReleased) { window.close(); }
+
+		}
+	}
+  
+  
+  //other properties for windows can be found in the documentation, they are intuitive
+  
